@@ -14,33 +14,54 @@
     margin-right: 5%;
   }
 
-.navbar-nav{
-  padding-right: 10%;
-  }
+	.navbar-nav{
+	  padding-right: 10%;
+	  }
 
-.move-down{
-  padding-top: 2%;
+	.move-down{
+	  padding-top: 2%;
+	}
+
+	.resume-shift-left{
+	  margin-right: 5%;
+	}
+
+	.line-padding{
+		margin-top: 1%;
+	}
+
+	.middle_space{
+		margin-right: 0.5%;
+		margin-left: 0.5%;
+	}
+
+	.footer_margin{
+		margin-left: 5%;
+	}
+
+	.nounderline{
+		text-decoration: none !important;
+	}
+
+	.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
 }
 
-.resume-shift-left{
-  margin-right: 5%;
+.container:hover .overlay {
+  opacity: 1;
 }
 
-.line-padding{
-	margin-top: 1%;
-}
-
-.middle_space{
-	margin-right: 0.5%;
-	margin-left: 0.5%;
-}
-
-.footer_margin{
-	margin-left: 5%;
-}
-
-.nounderline{
-	text-decoration: none !important;
+.down-shift-hover{
+	padding-top: 10%;
 }
 </style>
 
@@ -97,122 +118,192 @@
 <h1 class="text-center text-primary">Projects</h1>
 <br>
 </br>
+
 <div class="card-group justify-content-center">
-    <div class="col-sm-3 mb-auto p-3">
-    	<a class="nounderline" target="_blank" href="https://github.com/hsimjee/rshell">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/rshell.png" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Rshell<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Used APIs, system calls, and data structures to create a shell program inspired from Bash<br></br>Developed support for commands, nested parentheses and quotations, and file redirection</p>
-	    		</div>
-	    	</div>
-    	</a>
-    </div>
-    <div class="col-sm-3 middle_space mb-auto p-3">
-      <div class="card mx-auto" style="width:90%">
-			  <img class="card-img-top" src="img/spyfall.jpg" alt="Card image">
-			  <div class="card-body">
-			    <h4 class="card-title text-black">Spyfall</h4>
-			    <p class="text-grey text-center">_____________________________________________________</p>
-			    <p class="card-text text-black">Constructed an Android app, now in launch readiness phase<br></br>Programed algorithms to send SMS messages to contacts, chosen as players, giving each a role</p>
-    		</div>
-    	</div>
-    </div>
-    <div class="col-sm-3 mb-auto p-3">
-      <div class="card mx-auto" style="width:90%">
-			  <img class="card-img-top" src="img/plex.png" alt="Card image">
-			  <div class="card-body">
-			    <h4 class="card-title text-black">Plex Media Server</h4>
-			    <p class="text-grey text-center">_____________________________________________________</p>
-			    <p class="card-text text-black">Created and maintained a media server to stream my movies remotely<br></br><br></br></p>
-    		</div>
-    	</div>
-  	</div>
-  	<div class="col-sm-3 mb-auto p-3">
-  		<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Ocular-Echo">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/ocularecho.jpg" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Ocular-Echo<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">To help the visually impaired, made hardware that provides tactile feedback as the wearer
-					comes into proximity of potentially hazardous objects<br></br><br></p>
-	    		</div>
-	    	</div>
-    	</a>
-    </div>
-    <div class="col-sm-3 middle_space mb-auto p-3">
-    	<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Trees">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/trees.png" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Trees<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Created AVL and 2-3 trees with preorder, inorder, and postorder transversals<br></br><br></br></p>
-	    		</div>
-	    	</div>
-    	</a>
-    </div>
-    <div class="col-sm-3 mb-auto p-3">
-    	<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Cutie-Hack-2017">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/goldenbearclawadventure.png" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Golden Bear Claw Adv.<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Fabricated game concepts and created a text-based adventure game using<br></br>Created object models to parse user input, generate maps, and place items</p>
-	    		</div>
-	    	</div>
-    	</a>
-  	</div>
-  	<div class="col-sm-3 mb-auto p-3">
-      <div class="card mx-auto" style="width:90%">
-			  <img class="card-img-top" src="img/arduino.png" alt="Card image">
-			  <div class="card-body">
-			    <h4 class="card-title text-black">Custom Arduino Radio</h4>
-			    <p class="text-grey text-center">_____________________________________________________</p>
-			    <p class="card-text text-black">Designed a schematic and engineered a radio working primarily off of an Arduino Uno</br>Programed Arduino to receive bluetooth packages and control the radio appropriately including being able to scan and set favorite channels<br></p>
-    		</div>
-    	</div>
-    </div>
-    <div class="col-sm-3 middle_space mb-auto p-3">
-    	<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Bulletin-Board">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/bboard.jpg" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Bulletin Board<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Made a bulletin board using objects to create messages and replies<br></br><br></br></p>
-	    		</div>
-	    	</div>
-    	</a>
-    </div>
-    <div class="col-sm-3 mb-auto p-3">
-    	<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Battleship">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/battleship.png" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">Battleship<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Replicated game form and constructed maps with randomly placed ships<br></br>Programmed AI to play with random attacks, not allowing repetition</p>
-	    		</div>
-	    	</div>
-	    </a>
-  	</div>
-  	<div class="col-sm-3 mb-auto p-3">
-  		<a class="nounderline" target="_blank" href="https://github.com/hsimjee/The-Toothpick-Game">
-	      <div class="card mx-auto" style="width:90%">
-				  <img class="card-img-top" src="img/toothpick.png" alt="Card image">
-				  <div class="card-body">
-				    <h4 class="card-title text-black">The Toothpick Game<i class="float-right fas fa-external-link-alt"></i></h4>
-				    <p class="text-grey text-center">_____________________________________________________</p>
-				    <p class="card-text text-black">Created options for playing against another person or against an AI with three difficulties<br></br><br></br></p>
-	    		</div>
-	    	</div>
-	    </a>
-  	</div>
+	<div class="col-sm-3 mb-auto p-3">
+		<a class="nounderline" target="_blank" href="https://github.com/hsimjee/rshell">
+			<div class="container">
+				<div class="card mx-auto h-100" style="width:90%">
+					<img class="card-img-top" src="img/rshell.png" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Rshell</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Used APIs, system calls, and data structures to create a shell program inspired from Bash<br></br>Developed support for commands, nested parentheses and quotations, and file redirection</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Rshell<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+
+	<div class="col-sm-3 middle_space mb-auto p-3">
+			<div class="container">
+				<div class="card mx-auto h-100" style="width:90%">
+				<img class="card-img-top" src="img/spyfall.jpg" alt="Card image">
+				<div class="overlay">
+					<div class="text">
+						<h4 class="text-white text-center down-shift-hover">Spyfall</h4>
+						<h6 class="text-white text-center">_______________________________________<br></br>Constructed an Android app, now in launch readiness phase<br></br>Programed algorithms to send SMS messages to contacts, chosen as players, giving each a role</h6>
+					</div>
+				</div>
+				<div class="card-body">
+					<h4 class="card-title text-black">Spyfall</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<div class="card mx-auto h-100" style="width:90%">
+				<img class="card-img-top" src="img/plex.png" alt="Card image">
+				<div class="overlay">
+					<div class="text">
+						<h4 class="text-white text-center down-shift-hover">Plex Media Server</h4>
+						<h6 class="text-white text-center">_______________________________________<br></br>Created and maintained a media server to stream my movies remotely</h6>
+					</div>
+				</div>
+				<div class="card-body">
+					<h4 class="card-title text-black">Plex Media Server</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Ocular-Echo">
+				<div class="card mx-auto" style="width:90%">
+					<img class="card-img-top" src="img/ocularecho.jpg" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Ocular-Echo</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>To help the visually impaired, made hardware that provides tactile feedback as the wearer 
+							comes into proximity of potentially hazardous objects</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Ocular-Echo<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-sm-3 middle_space mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Trees">
+				<div class="card mx-auto tree-custom_space" style="width:90%">
+					<img class="card-img-top" src="img/trees.png" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Trees</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Created AVL and 2-3 trees with preorder, inorder, and postorder transversals</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Trees<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Cutie-Hack-2017">
+				<div class="card mx-auto" style="width:90%">
+					<img class="card-img-top" src="img/goldenbearclawadventure.png" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Golden Bear Claw Adv.</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Fabricated game concepts and created a text-based adventure game using<br></br>Created object models to parse user input, generate maps, and place items</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Golden Bear Claw Adv.<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<div class="card mx-auto" style="width:90%">
+				<img class="card-img-top" src="img/arduino.png" alt="Card image">
+				<div class="overlay">
+					<div class="text">
+						<h4 class="text-white text-center down-shift-hover">Custom Arduino Radio</h4>
+						<h6 class="text-white text-center">_______________________________________<br></br>Designed a schematic and engineered a radio working primarily off of an Arduino Uno<br></br>Programed Arduino to receive bluetooth packages and control the radio appropriately including being able to scan and set favorite channels</h6>
+					</div>
+				</div>
+				<div class="card-body">
+				<h4 class="card-title text-black">Custom Arduino Radio</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-sm-3 middle_space mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Bulletin-Board">
+				<div class="card mx-auto" style="width:90%">
+					<img class="card-img-top" src="img/bboard.jpg" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Bulletin Board</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Made a bulletin board using objects to create messages and replies</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Bulletin Board<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/Battleship">
+				<div class="card mx-auto" style="width:90%">
+					<img class="card-img-top" src="img/battleship.png" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">Rshell</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Replicated game form and constructed maps with randomly placed ships<br></br>Programmed AI to play with random attacks, not allowing repetition</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">Battleship<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-sm-3 mb-auto p-3">
+		<div class="container">
+			<a class="nounderline" target="_blank" href="https://github.com/hsimjee/The-Toothpick-Game">
+				<div class="card mx-auto" style="width:90%">
+					<img class="card-img-top" src="img/toothpick.png" alt="Card image">
+					<div class="overlay">
+						<div class="text">
+							<h4 class="text-white text-center down-shift-hover">The Toothpick Game</h4>
+							<h6 class="text-white text-center">_______________________________________<br></br>Created options for playing against another person or against an AI with three difficulties</h6>
+						</div>
+					</div>
+					<div class="card-body">
+						<h4 class="card-title text-black">The Toothpick Game<i class="float-right fas fa-external-link-alt"></i></h4>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
 </div>
 
 <div id="skills"> <p class="text-grey line-padding text-center">___________________________________________________________________________________________________________________________</p> </div>
