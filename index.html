@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 
 <style>
+	.background1{
+		margin-top: 5%;
+	}
+
 	.mypicture{
 		border-radius: 5%;
+	}
+
+	.title{
+		margin-bottom: 1%;
+	}
+
+	.title1{
+		margin-top: 2%;
+		margin-bottom: 5%;
+		font-size: 275%;
+	}
+
+	.title2{
+		margin-top: 2%;
+		margin-bottom: 5%;
+		font-size: 275%;
 	}
 
   .text-black{
@@ -72,6 +92,7 @@
 	padding-right: 5%;
 	padding-left: 5%;
 	font-size: 1.75vh !important;
+	margin-top: 10%;
 }
 
 .hover-title-padding{
@@ -82,6 +103,11 @@
 
 .projects-title{
 	font-size: 2.25vh !important;
+}
+
+.line{
+	margin-top: 3%;
+	margin-bottom: 5%;
 }
 </style>
 
@@ -129,27 +155,19 @@
 </nav>
 
   <div class="background1 text-center">
-    <br>
-    </br>
-    <br>
-    </br>
     <div class="col-lg-7 col-md-12 p-3 d-inline-flex justify-content-center">
 			<img class="mypicture" src="img/mypicture.jpg" alt="Card image" style="width:44%; height: 44%">
 		</div>
-    <br>
-    </br>
-    <h1 class="display-3 text-success"><strong>Huzaifah Simjee</strong></h1>
+    <h1 class="display-3 text-success title"><strong>Huzaifah Simjee</strong></h1>
 
     <h5><i class="fas fa-cubes"></i> Software Engineer <i class="fas fa-cubes"></i></h5> 
     <a href="https://goo.gl/r5hmez" target="_blank"><h5 class="text-center"><button type="button" class="btn btn-success btn-lg"><i class="fas fa-download resume-shift-left"></i> Resume</button></h5></a>
-    <div id="projects"> <p class="projects text-grey line-padding text-center">___________________________________________________________________________________________________________________________</p> </div>
-    <br>
-    </br>
+    <div id="projects">
+    	<hr width="50%" class="line">
+  	</div>
   </div>
 
-<h1 class="text-center text-primary">Projects</h1>
-<br>
-</br>
+<h1 class="text-center text-primary title1">Projects</h1>
 
 <div class="card-group justify-content-center">
 	<div class="col-lg-3 col-md-8 mb-auto p-3">
@@ -160,7 +178,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Rshell</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Used APIs, system calls, and data structures to create a shell program inspired from Bash<br></br>Developed support for commands, nested parentheses and quotations, and file redirection</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Used APIs, system calls, and data structures to create a shell program inspired from Bash<br></br>Developed support for commands, nested parentheses and quotations, and file redirection</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -178,7 +197,8 @@
 				<div class="overlay">
 					<div class="text">
 						<h4 class="text-white text-center down-shift-hover hover-title-padding">Spyfall</h4>
-						<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Constructed an Android app, now in launch readiness phase<br></br>Programed algorithms to send SMS messages to contacts, chosen as players, giving each a role</h6>
+						<hr width="60%" color="white">
+						<h6 class="text-white text-center hover-text-padding">Constructed an Android app, now in launch readiness phase<br></br>Programed algorithms to send SMS messages to contacts, chosen as players, giving each a role</h6>
 					</div>
 				</div>
 				<div class="card-body">
@@ -195,7 +215,8 @@
 				<div class="overlay">
 					<div class="text">
 						<h4 class="text-white text-center down-shift-hover hover-title-padding">Plex Media Server</h4>
-						<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Created and maintained a media server to stream my movies remotely</h6>
+						<hr width="60%" color="white">
+						<h6 class="text-white text-center hover-text-padding">Created and maintained a media server to stream my movies remotely</h6>
 					</div>
 				</div>
 				<div class="card-body">
@@ -213,7 +234,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Ocular-Echo</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>To help the visually impaired, made hardware that provides tactile feedback as the wearer 
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">To help the visually impaired, made hardware that provides tactile feedback as the wearer 
 							comes into proximity of potentially hazardous objects</h6>
 						</div>
 					</div>
@@ -233,7 +255,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Trees</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Created AVL and 2-3 trees with preorder, inorder, and postorder transversals</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Created AVL and 2-3 trees with preorder, inorder, and postorder transversals</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -252,7 +275,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Golden Bear Claw Adventure</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Fabricated game concepts and created a text-based adventure game using<br></br>Created object models to parse user input, generate maps, and place items</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Fabricated game concepts and created a text-based adventure game using<br></br>Created object models to parse user input, generate maps, and place items</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -270,7 +294,8 @@
 				<div class="overlay">
 					<div class="text">
 						<h4 class="text-white text-center down-shift-hover hover-title-padding">Custom Arduino Radio</h4>
-						<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Designed a schematic and engineered a radio working primarily off of an Arduino Uno<br></br>Programed Arduino to receive bluetooth packages and control the radio appropriately including being able to scan and set favorite channels</h6>
+						<hr width="60%" color="white">
+						<h6 class="text-white text-center hover-text-padding">Designed a schematic and engineered a radio working primarily off of an Arduino Uno<br></br>Programed Arduino to receive bluetooth packages and control the radio appropriately including being able to scan and set favorite channels</h6>
 					</div>
 				</div>
 				<div class="card-body">
@@ -288,7 +313,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Bulletin Board</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Made a bulletin board using objects to create messages and replies</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Made a bulletin board using objects to create messages and replies</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -307,7 +333,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">Battleship</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Replicated game form and constructed maps with randomly placed ships<br></br>Programmed AI to play with random attacks, not allowing repetition</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Replicated game form and constructed maps with randomly placed ships<br></br>Programmed AI to play with random attacks, not allowing repetition</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -326,7 +353,8 @@
 					<div class="overlay">
 						<div class="text">
 							<h4 class="text-white text-center down-shift-hover hover-title-padding">The Toothpick Game</h4>
-							<h6 class="text-white text-center hover-text-padding">______________________________<br></br>Created options for playing against another person or against an AI with three difficulties</h6>
+							<hr width="60%" color="white">
+							<h6 class="text-white text-center hover-text-padding">Created options for playing against another person or against an AI with three difficulties</h6>
 						</div>
 					</div>
 					<div class="card-body">
@@ -338,12 +366,12 @@
 	</div>
 </div>
 
-<div id="skills"> <p class="text-grey line-padding text-center">___________________________________________________________________________________________________________________________</p> </div>
-  <br>
-  </br>
-<h1 class="text-center text-primary">Skills</h1>
-<br>
-</br>
+<div id="skills">
+	<hr class="title" width="50%">
+</div>
+
+<h1 class="text-center text-primary title2">Skills</h1>
+
 <div class="card-group justify-content-center">
   <div class="col-sm-3 mb-auto p-3">
     <div class="card mx-auto border-0" style="width:90%">
@@ -356,9 +384,7 @@
   	</div>
   </div>
   <div class="col-sm-3 mb-auto p-3">
-    <div class="card mx-auto border-0" style="width:125%">
-    	<br>
-    	</br>
+    <div class="card mx-auto border-0" style="width:100%; margin-top:10%;">
 		  <img class="card-img-top" src="img/github.png" alt="Card image">
   	</div>
   </div>
