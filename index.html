@@ -38,8 +38,9 @@
     margin-right: 5%;
   }
 
-	.navbar-nav{
+	.navbar-items{
 	  padding-right: 10%;
+      margin-left: 1100px;
 	  }
 
 	.move-down{
@@ -67,7 +68,7 @@
 		text-decoration: none !important;
 	}
 
-	.overlay {
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -108,6 +109,47 @@
 .line{
 	margin-top: 3%;
 }
+
+.dropdown{
+    margin-right: 5%;
+    bottom: 4% !important;
+}
+
+.menu{
+    background-color: #299FBD !important;
+}
+
+div.hidden2{
+    display: none;
+}
+
+.dropdown-item:hover{
+    color: #299FBD !important;
+}
+
+.dropdown-item:active{
+    background-color: white !important;
+}
+
+.dropdown-item:focus{
+    background-color: white !important;
+}
+
+
+@media (max-width: 960px) {
+    div.hidden1{
+      display: none;
+    }
+    div.hidden2{
+      display: inline-block;
+    }
+    .navbar-brand{
+        float: left;
+        padding: 15px;
+        text-align: center;
+        width: 35%;
+    }
+  }
 </style>
 
 
@@ -140,18 +182,33 @@
 <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
   <a class="navbar-brand" href=""><h3><i class="far fa-user"></i> Huzaifah Simjee</h3></a>
 
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-      <a class="nav-link text-white" href="https://goo.gl/r5hmez" target="_blank"><button class="btn btn-outline-light" type="button">Resume</button></a>
-    </li>
-    <li class="nav-item move-down">
-      <a class="nav-link text-white" href="#projects">Projects</a>
-    </li>
-    <li class="nav-item move-down">
-      <a class="nav-link text-white" href="#skills">Skills</a>
-    </li>
-  </ul>
+  <div class="hidden1 navbar-items">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="https://goo.gl/r5hmez" target="_blank"><button class="btn btn-outline-light" type="button">Resume</button></a>
+        </li>
+        <li class="nav-item move-down">
+          <a class="nav-link text-white" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item move-down">
+          <a class="nav-link text-white" href="#skills">Skills</a>
+        </li>
+      </ul>
+  </div>
 </nav>
+
+<div class="hidden2">
+  <div class="dropdown fixed-bottom text-right">
+    <button type="button" class="btn btn-info btn-lg rounded-circle bg-info" data-toggle="dropdown">
+      <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="dropdown-menu menu text-center border-info">
+      <a class="dropdown-item text-white" href="https://goo.gl/r5hmez" target="_blank">Resume</a>
+      <a class="dropdown-item text-white" href="#projects">Projects</a>
+      <a class="dropdown-item text-white" href="#skills">Skills</a>
+    </div>
+  </div>
+</div>
 
   <div class="background1 text-center">
     <div class="col-lg-7 col-md-12 p-3 d-inline-flex justify-content-center">
