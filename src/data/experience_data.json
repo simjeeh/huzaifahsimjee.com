@@ -1,0 +1,14 @@
+[
+    {
+        "title":"Shoreline Software SWE\n(Intern)",
+        "description":"Helped in making a server monitoring tool with minimal resolution loss over long periods of time\nDeveloped a multi-language interop layer using a client-server framework to manipulate server and operational metrics\nDecreased compression time on metrics by 98.4%",
+        "img":"shoreline.png",
+        "link":"https://shorelinesoftware.com/"
+    },
+    {
+        "title":"Shoreline Software SWE\n(Part-time)",
+        "description":"Building a full-featured demo app that will be used to provide product comparison to potential customers\nThe app ingests data from competitors as well as our marquee product, showing side by side comparisons and highlighting the advantages of our product",
+        "img":"shoreline.png",
+        "link":"https://shorelinesoftware.com/"
+    }
+]

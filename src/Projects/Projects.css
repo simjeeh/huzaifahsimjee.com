@@ -1,0 +1,28 @@
+.proj_card_text{
+    font-size: 1.8vmin;
+    font-weight:bold;
+    text-align: center;
+}
+
+.proj_card_back_title{
+    font-size: 2.25vmin;
+    font-weight:bold;
+}
+.proj_card_img{
+    width: 18rem;
+    margin-left: -16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: -17px;
+    background-color: black;
+}
+
+.proj_nounderline{
+    color: black;
+    text-decoration: none;
+}
+
+.proj_nounderline, .proj_nounderline:hover {
+    color: black;
+    text-decoration: none;
+}
