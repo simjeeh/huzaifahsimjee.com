@@ -29,7 +29,7 @@ class Experience extends React.Component {
                             flipOnClick={false}
                             flipDirection="horizontal"
                             ref={(r) => this[title1] = r}
-                            style={{ width: '18rem'}}
+                            style={{ width: '18rem' }}
                         >
                             <FrontSide style={{ width: '18rem', 'border-radius': '5px'}}>
                                 <a className="exp_nounderline" target="_blank" rel="noopener noreferrer"  href={link1}>
@@ -45,9 +45,9 @@ class Experience extends React.Component {
                             </FrontSide>
                             <BackSide style={{ width: '18rem', 'border-radius': '5px'}}>
                                 <Card.Body>
-                                    <Card.Title><h6 class="exp_card_back_title">{title1}</h6></Card.Title>
+                                    <Card.Title><h6 class="exp_card_back_mobile_title">{title1}</h6></Card.Title>
                                     <hr/>
-                                    <Card.Text class="exp_card_text">
+                                    <Card.Text class="exp_card_mobile_text">
                                         {description1.split('\n').map(function(item, key) {
                                             return (
                                                 <span key={key}>
@@ -118,7 +118,7 @@ class Experience extends React.Component {
         <div>
             <h1>Experience</h1>
             <br/>
-            <CardColumns style={{"justify-content": "center", "display": "inline"}}>
+            <CardColumns class="row justify-content-center" style={{ "justify-content": "center", "align-items": "center", "display": "flex" }}>
                 {this.makeGrid()}
             </CardColumns>
         </div>

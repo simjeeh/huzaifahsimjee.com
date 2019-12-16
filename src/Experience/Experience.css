@@ -4,8 +4,19 @@
     text-align: center;
 }
 
+.exp_card_mobile_text{
+    font-size: 2.5vmin;
+    font-weight:bold;
+    text-align: center;
+}
+
 .exp_card_back_title{
     font-size: 2.25vmin;
+    font-weight:bold;
+}
+
+.exp_card_back_mobile_title{
+    font-size: 2.75vmin;
     font-weight:bold;
 }
 

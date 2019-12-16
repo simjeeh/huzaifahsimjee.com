@@ -4,10 +4,22 @@
     text-align: center;
 }
 
+.proj_card_mobile_text{
+    font-size: 2.5vmin;
+    font-weight:bold;
+    text-align: center;
+}
+
 .proj_card_back_title{
     font-size: 2.25vmin;
     font-weight:bold;
 }
+
+.proj_card_back_mobile_title{
+    font-size: 2.75vmin;
+    font-weight:bold;
+}
+
 .proj_card_img{
     width: 18rem;
     margin-left: -16px;
