@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
+import {BrowserView, MobileView} from "react-device-detect";
 
 class Skills extends React.Component {
   fill_three(temp_data){
@@ -14,13 +15,28 @@ class Skills extends React.Component {
       return (
           <Row style={{"justify-content": "center", 'height':'125px', 'margin-bottom': '50px'}}>
               <Col xs={4} md={4}>
-                  <Image style={{"justify-content": "center", 'height':'125px'}} src={img1} fluid/>
+                  <BrowserView>
+                      <Image style={{"justify-content": "center", 'height':'125px'}} src={img1} fluid/>
+                  </BrowserView>
+                  <MobileView>
+                      <Image style={{"justify-content": "center", 'height':'62.5px'}} src={img1} fluid/>
+                  </MobileView>
               </Col>
               <Col xs={4} md={4}>
-                  <Image style={{"justify-content": "center", 'height':'125px'}} src={img2} fluid/>
+                  <BrowserView>
+                      <Image style={{"justify-content": "center", 'height':'125px'}} src={img2} fluid/>
+                  </BrowserView>
+                  <MobileView>
+                      <Image style={{"justify-content": "center", 'height':'62.5px'}} src={img2} fluid/>
+                  </MobileView>
               </Col>
               <Col xs={4} md={4}>
-                  <Image style={{"justify-content": "center", 'height':'125px'}} src={img3} fluid/>
+                  <BrowserView>
+                      <Image style={{"justify-content": "center", 'height':'125px'}} src={img3} fluid/>
+                  </BrowserView>
+                  <MobileView>
+                      <Image style={{"justify-content": "center", 'height':'62.5px'}} src={img3} fluid/>
+                  </MobileView>
               </Col>
           </Row>
       )
@@ -30,10 +46,10 @@ class Skills extends React.Component {
       const img2 = require('../img/Skills/' + temp_data[1]);
       return (
           <Row style={{"justify-content": "center", "display": "flex", 'height':'125px', 'margin-bottom': '50px'}}>
-              <Col xs={4} md={4}>
+              <Col xs={10} md={4}>
                   <Image style={{"justify-content": "center", 'height':'125px'}} src={img1} fluid/>
               </Col>
-              <Col xs={4} md={4}>
+              <Col xs={10} md={4}>
                   <Image style={{"justify-content": "center", 'height':'125px'}} src={img2} fluid/>
               </Col>
           </Row>
@@ -43,7 +59,7 @@ class Skills extends React.Component {
         const img = require('../img/Skills/' + temp_data[0]);
         return (
             <Row style={{"justify-content": "center", 'height':'125px', 'margin-bottom': '50px'}}>
-                <Col xs={4} md={4}>
+                <Col xs={5} md={4}>
                     <Image style={{"justify-content": "center", 'height':'125px'}} src={img} fluid/>
                 </Col>
             </Row>
