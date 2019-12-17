@@ -81,7 +81,7 @@ class Experience extends React.Component {
                                     </Card.Body>
                                 </FrontSide>
                                 <BackSide style={{ width: '18rem', 'border-radius': '5px'}}>
-                                    <Card.Body>
+                                    <Card.Body style={{height: '15rem'}}>
                                         <Card.Title><h6 class="exp_card_back_title">{title1}</h6></Card.Title>
                                         <hr/>
                                         <Card.Text class="exp_card_text">

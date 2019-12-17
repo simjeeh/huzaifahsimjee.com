@@ -43,7 +43,7 @@ class Projects extends React.Component {
                             <Button variant="info" size="sm" style={{'top':'0', 'position': 'absolute', 'right':'0', 'border-radius': '15px' }} onClick={() => this[title1].toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                         </FrontSide>
                         <BackSide style={{ width: '18rem', 'border-radius': '5px'}}>
-                            <Card.Body>
+                            <Card.Body style={{height: '15rem'}}>
                                 <Card.Title><h6 class="proj_card_back_mobile_title">{title1}</h6></Card.Title>
                                 <hr/>
                                 <Card.Text class="proj_card_mobile_text">
