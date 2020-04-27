@@ -1,34 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+import $ from 'jquery';
 import './App.css';
-import Header from './Header/Header.js';
-import Profile from './Profile/Profile.js';
-import Experience from './Experience/Experience.js';
-import Projects from './Projects/Projects.js';
-import Skills from './Skills/Skills.js';
+import Header from './Components/Header';
+import About from './Components/About';
+import Education from './Components/Education';
+import Experience from './Components/Experience';
+import Projects from './Components/Projects';
+import Contact from './Components/Contact';
+import Skills from './Components/Skills';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <br></br>
-      <Profile />
-      <br></br>
-      <hr style={{width:"80%"}}  id="experience"/>
-        <br></br>
-        <br></br>
-      <Experience />
-      <br></br>
-      <hr style={{width:"80%"}} id="projects"/>
-        <br></br>
-        <br></br>
-      <Projects />
-      <br></br>
-      <hr style={{width:"80%"}} id="skills"/>
-        <br></br>
-        <br></br>
-      <Skills />
-    </div>
-  );
+
+class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      foo: 'bar',
+      resumeData: {}
+    };
+
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
+
+  }
+
+  getResumeData(){
+    $.ajax({
+      url:'/resumeData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({resumeData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.getResumeData();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header data={this.state.resumeData.main}/>
+        <About data={this.state.resumeData.main}/>
+        <Education data={this.state.resumeData.experience}/>
+        <Experience data={this.state.resumeData.experience}/>
+        <Projects data={this.state.resumeData.experience}/>
+        <Skills data={this.state.resumeData.experience}/>
+        <Contact data={this.state.resumeData.main}/>
+      </div>
+    );
+  }
 }
 
 export default App;
