@@ -25,6 +25,11 @@
         "school": "University of California, Riverside",
         "degree": "Bachelor's in Computer Science",
         "graduated": "June 2020"
+      },
+      {
+        "school": "Sage Hill School",
+        "degree": "High School",
+        "graduated": "2016-2020"
       }
     ],
     "work": [
@@ -124,12 +129,12 @@
       "c.png",
       "elixir.png",
       "erlang.png",
-      "github.png",
       "docker.png",
-      "kubernetes.png",
       "chromium.png",
       "puppeteer.png",
+      "github.png",
       "AWS.png",
+      "kubernetes.png",
       "dynamodb.png",
       "s3.png",
       "apigateway.png",
@@ -139,6 +144,9 @@
       "cloudformation.png",
       "cloudwatch.png",
       "cognito.png",
+      "route53.png",
+      "cloudfront.png",
+      "amplify.png",
       "bash.png",
       "react.png",
       "bootstrap.png",

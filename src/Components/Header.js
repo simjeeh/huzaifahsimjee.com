@@ -1,55 +1,115 @@
 import React, { Component } from 'react';
+import {Nav, Button, Card} from "react-bootstrap";
+import {faBars, faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import $ from 'jquery'
 
 class Header extends Component {
-  render() {
-
-    if(this.props.data){
-      var name = this.props.data.name;
-      var occupation= this.props.data.occupation;
-      var description= this.props.data.description;
-      var networks= this.props.data.social.map(function(network){
-        return <li key={network.name}><a href={network.url} target="_blank"><i className={network.className}></i></a></li>
-      })
+    toggleNavCard(){
+        $(document).ready(function(){
+            $('#nav-card').slideToggle('show');
+            $('.mobile-nav').slideToggle('show');
+        });
     }
 
-    return (
-      <header id="home">
+    render() {
 
-      <nav id="nav-wrap">
+        if(this.props.data){
+            var name = this.props.data.name;
+            var occupation= this.props.data.occupation;
+            var description= this.props.data.description;
+            var networks= this.props.data.social.map(function(network){
+                return <li key={network.name}><a href={network.url} target="_blank"><i className={network.className}></i></a></li>
+            })
+        }
 
-         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+        return (
+            <header id="home">
+                <nav id="nav-wrap" className="desktop-nav">
+                    <Nav id="nav" as="ul" className="justify-content-center">
+                        <Nav.Item className="current" as="li">
+                            <Nav.Link className="smoothscroll" href="#home">Home</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#about">About</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#education">Education</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#experience">Experience</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#projects">Projects</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#skills">Skills</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item as="li">
+                            <Nav.Link className="smoothscroll" href="#contact">Contact</Nav.Link>
+                        </Nav.Item>
+                    </Nav>
+                </nav>
 
-         <ul id="nav" className="nav">
-            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-            <li><a className="smoothscroll" href="#education">Education</a></li>
-	         <li><a className="smoothscroll" href="#experience">Experience</a></li>
-            <li><a className="smoothscroll" href="#projects">Projects</a></li>
-            <li><a className="smoothscroll" href="#skills">Skills</a></li>
-            <li><a className="smoothscroll" href="#contact">Contact</a></li>
-         </ul>
+                <Button id="nav-button" size="lg" onClick={this.toggleNavCard}><FontAwesomeIcon icon={faBars}/></Button>
+                <Card id="nav-card">
+                    <nav id="nav-wrap" className="mobile-nav">
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item className="current" as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#home">Home</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#about">About</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#education">Education</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#experience">Experience</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#projects">Projects</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#skills">Skills</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                        <Nav id="nav" as="ul" className="justify-content-center">
+                            <Nav.Item as="li">
+                                <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#contact">Contact</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </nav>
+                </Card>
 
-      </nav>
+                <div className="row banner">
+                    <div className="banner-text">
+                        <h1 className="responsive-headline">{name}</h1>
+                        <h3>{occupation}</h3>
+                        <hr />
+                        <ul className="social">
+                            {networks}
+                        </ul>
+                    </div>
+                </div>
 
-      <div className="row banner">
-         <div className="banner-text">
-            <h1 className="responsive-headline">{name}</h1>
-            <h3>{occupation}</h3>
-            <hr />
-            <ul className="social">
-               {networks}
-            </ul>
-         </div>
-      </div>
+                <p className="scrolldown">
+                    <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+                </p>
 
-      <p className="scrolldown">
-         <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
-      </p>
-
-   </header>
-    );
-  }
+            </header>
+        );
+    }
 }
 
 export default Header;

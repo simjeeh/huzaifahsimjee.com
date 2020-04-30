@@ -6,6 +6,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 import { BrowserView, MobileView } from "react-device-detect";
 import Button from "react-bootstrap/Button";
+import {Col, Container, Row} from "react-bootstrap";
 
 class Projects extends Component {
     render() {
@@ -14,93 +15,79 @@ class Projects extends Component {
                 var projects_title = projects.title;
                 var projects_years = projects.years;
                 var projects_img = "images/projects/" + projects.img;
-                var projects_description = projects.description.split('\n').map((line) => <p style={{'font-size': '1.35rem', 'line-height': 'normal', 'font-weight': 'bold', 'margin-bottom':'10px'}}>{line}</p>);
-                var projects_link = projects.url;
-                let linkIcon = <FontAwesomeIcon icon={faExternalLinkAlt} style={{"margin-left": "10px"}}/>;
+                var projects_description = projects.description.split('\n').map((line) => <p className="card-description">{line}</p>);
+                var projects_link = projects.link;
+                let linkIcon = <FontAwesomeIcon icon={faExternalLinkAlt} className="fa-icon"/>;
+                if(projects_link == ""){
+                    linkIcon = "";
+                    projects_link = null;
+                }
                 var flippy;
 
                 return (
-                    <Card className="text-center" style={{width: '30rem', "margin-bottom": "2.5%", 'flex': '1'}}>
-                        <MobileView>
+                    <Card className="text-center">
+                        <MobileView className="cards">
                             <Flippy
                                 flipOnHover={false}
                                 flipOnClick={false}
                                 flipDirection="horizontal"
                                 ref={(r) => flippy = r}
-                                style={{width: '30rem', height: '30rem'}}
                             >
-                                <FrontSide style={{width: '30rem', 'border-radius': '5px', height: '30rem'}}>
-                                    <a className="exp_nounderline" target="_blank" rel="noopener noreferrer"
-                                       href={projects_link}>
-                                        <Card.Img src={projects_img} class="exp_card_img"/>
-                                        <Card.Body style={{'margin': '-15px', 'height': '82.5px'}}>
-                                            <Card.Title style={{'display': 'inline-flex'}}>
-                                                <h6 style={{
-                                                    whiteSpace: "pre-line",
-                                                    "margin-top": "20px"
-                                                }}>{projects_title}</h6>
-                                            </Card.Title>
-                                            {linkIcon}
+                                <FrontSide>
+                                    <a target="_blank" rel="noopener noreferrer" href={projects_link}>
+                                        <Card.Img src={projects_img}/>
+                                        <Card.Body>
+                                            <span>
+                                                <Card.Title>
+                                                    <h4>{projects_title}{linkIcon}</h4>
+                                                </Card.Title>
+                                            </span>
                                         </Card.Body>
                                     </a>
-                                    <Button variant="info" size="sm" style={{
-                                        'top': '0',
-                                        'position': 'absolute',
-                                        'right': '0',
-                                        'border-radius': '15px'
-                                    }} onClick={() => flippy.toggle()}><FontAwesomeIcon
-                                        icon={faBars}/></Button>
+                                    <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                 </FrontSide>
-                                <BackSide style={{width: '30rem', 'border-radius': '5px'}}>
+                                <BackSide>
                                     <Card.Body>
                                         <Card.Title>
-                                            <h6 style={{'font-weight': 'bold'}}
-                                                className="exp_card_back_title">{projects_title}</h6>
-                                            <p style={{'font-size': '12px', 'font-weight': 'bold', 'margin-top': '-10px', 'margin-bottom': '-10px'}}>{projects_years}</p>
+                                            <h5>{projects_title}</h5>
+                                            <h6>{projects_years}</h6>
                                         </Card.Title>
                                         <hr/>
-                                        <Card.Text class="exp_card_mobile_text">
+                                        <Card.Text>
                                             {projects_description}
                                         </Card.Text>
-                                        <Button variant="info" size="sm" style={{
-                                            'top': '0',
-                                            'position': 'absolute',
-                                            'right': '0',
-                                            'border-radius': '15px'
-                                        }} onClick={() => flippy.toggle()}><FontAwesomeIcon
-                                            icon={faBars}/></Button>
+                                        <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                     </Card.Body>
                                 </BackSide>
                             </Flippy>
                         </MobileView>
                         <BrowserView className="cards">
-                            <a className="exp_nounderline" target="_blank" rel="noopener noreferrer" href={projects_link}>
+                            <a target="_blank" rel="noopener noreferrer" href={projects_link}>
                                 <Flippy
                                     flipOnHover={true}
                                     flipOnClick={false}
                                     flipDirection="horizontal"
-                                    style={{width: '30rem', height: '30rem'}}
                                 >
-                                    <FrontSide style={{width: '30rem', 'border-radius': '5px', height: '30rem'}}>
-                                        <Card.Img src={projects_img} style={{'border-radius': '5px'}}/>
-                                        <Card.Title style={{'display': 'inline-flex', 'margin-top': '15px'}}>
-                                            <h6 style={{
-                                                whiteSpace: "pre-line",
-                                                "margin-top": "20px"
-                                            }}>{projects_title}</h6>
-                                        </Card.Title>
-                                        {linkIcon}
-                                    </FrontSide>
-                                    <BackSide style={{width: '30rem', 'border-radius': '5px', height: '30rem'}}>
-                                        <Card.Body style={{height: '30rem', 'color': 'black'}}>
+                                    <FrontSide>
+                                        <Card.Img src={projects_img}/>
+                                        <span>
                                             <Card.Title>
-                                                <h6 style={{'font-weight': 'bold'}} class="exp_card_back_title">{projects_title}</h6>
-                                                <p style={{'font-size': '12px', 'font-weight': 'bold', 'margin-top': '-10px', 'margin-bottom':'-10px'}}>{projects_years}</p>
+                                                <h3>{projects_title}{linkIcon}</h3>
+                                            </Card.Title>
+                                        </span>
+                                    </FrontSide>
+                                    <BackSide>
+                                        <Card.Body>
+                                            <Card.Title>
+                                                <h4>{projects_title}</h4>
+                                                <h5>{projects_years}</h5>
                                             </Card.Title>
                                             <hr/>
-                                            <Card.Text class="exp_card_text">
-                                                {projects_description}
-                                            </Card.Text>
+                                            <span>
+                                                <Card.Text>
+                                                    {projects_description}
+                                                </Card.Text>
+                                            </span>
                                         </Card.Body>
                                     </BackSide>
                                 </Flippy>
@@ -113,16 +100,18 @@ class Projects extends Component {
 
         return (
             <section id="projects">
-                <div className="row">
-                    <div className="three columns header-col text-center">
-                        <h1><span>Projects</span></h1>
-                    </div>
-                    <div className="nine columns main-col">
-                        <CardDeck style={{display: 'flex', flexDirection: 'row', 'flex-wrap': 'wrap'}}>
-                            {projects}
-                        </CardDeck>
-                    </div>
-                </div>
+                <Container>
+                    <Row>
+                        <Col sm={2} className="text-center">
+                            <h1><span>Projects</span></h1>
+                        </Col>
+                        <Col sm={10}>
+                            <Container className="cards-container">
+                                {projects}
+                            </Container>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         )
     }

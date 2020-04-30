@@ -68,6 +68,9 @@ class Contact extends Component {
 				   </div>
            </div>
       </div>
+      <p className="go-top">
+          <a className="smoothscroll" href="#home"><i className="icon-up-circle"></i></a>
+      </p>
    </section>
     );
   }

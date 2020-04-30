@@ -7,13 +7,13 @@ class Skills extends Component {
             var skillList = this.props.data.skills;
             var photos = [];
             while(skillList.length > 0){
-                photos.push(skillList.splice(0,3))
+                photos.push(skillList.splice(0,5))
             }
             var skills =
                     photos.map((cols) => (
-                        <Row style={{'display': 'flex', 'margin-bottom':'25px'}}>
+                        <Row>
                             {cols.map((img) => (
-                                <Col style={{'margin-top': 'auto', 'margin-bottom': 'auto', 'margin-right':'50px'}}>
+                                <Col calssName="text-center">
                                     <Image src={"images/skills/"+img} rounded />
                                 </Col>
                             ))}
@@ -23,16 +23,18 @@ class Skills extends Component {
 
         return (
             <section id="skills">
-                <div className="row">
-                    <div className="three columns header-col text-center">
-                        <h1><span>Skills</span></h1>
-                    </div>
-                    <div className="nine columns main-col">
-                        <Container>
-                            {skills}
-                        </Container>
-                    </div>
-                </div>
+                <Container>
+                    <Row>
+                        <Col sm={2} className="text-center">
+                            <h1><span>Skills</span></h1>
+                        </Col>
+                        <Col sm={10}>
+                            <Container>
+                                {skills}
+                            </Container>
+                        </Col>
+                    </Row>
+                </Container>
             </section>
         )
     }
