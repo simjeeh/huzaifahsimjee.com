@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
 import './App.css';
 import Header from './Components/Header';
 import About from './Components/About';
@@ -7,6 +6,7 @@ import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
+import data from './data/portfolioData.json';
 /*import Contact from './Components/Contact';*/
 
 class App extends Component {
@@ -14,28 +14,9 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      foo: 'bar',
-      resumeData: {}
+        foo: 'bar',
+        resumeData: data
     };
-  }
-
-  getResumeData(){
-    $.ajax({
-      url:'/resumeData.json',
-      dataType:'json',
-      cache: false,
-      success: function(data){
-        this.setState({resumeData: data});
-      }.bind(this),
-      error: function(xhr, status, err){
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  componentDidMount(){
-    this.getResumeData();
   }
 
   render() {
