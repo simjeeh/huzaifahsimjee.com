@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Nav, Button, Card} from "react-bootstrap";
-import {faBars, faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import $ from 'jquery'
 
@@ -17,9 +17,8 @@ class Header extends Component {
         if(this.props.data){
             var name = this.props.data.name;
             var occupation= this.props.data.occupation;
-            var description= this.props.data.description;
             var networks= this.props.data.social.map(function(network){
-                return <li key={network.name}><a href={network.url} target="_blank"><i className={network.className}></i></a></li>
+                return <li key={network.name}><a href={network.url} target="_blank" rel="noopener noreferrer"><i className={network.className}></i></a></li>
             })
         }
 
@@ -45,9 +44,9 @@ class Header extends Component {
                         <Nav.Item as="li">
                             <Nav.Link className="smoothscroll" href="#skills">Skills</Nav.Link>
                         </Nav.Item>
-                        <Nav.Item as="li">
+                        {/*<Nav.Item as="li">
                             <Nav.Link className="smoothscroll" href="#contact">Contact</Nav.Link>
-                        </Nav.Item>
+                        </Nav.Item>*/}
                     </Nav>
                 </nav>
 
@@ -84,11 +83,11 @@ class Header extends Component {
                                 <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#skills">Skills</Nav.Link>
                             </Nav.Item>
                         </Nav>
-                        <Nav id="nav" as="ul" className="justify-content-center">
+                        {/*<Nav id="nav" as="ul" className="justify-content-center">
                             <Nav.Item as="li">
                                 <Nav.Link className="smoothscroll" onClick={this.toggleNavCard} href="#contact">Contact</Nav.Link>
                             </Nav.Item>
-                        </Nav>
+                        </Nav>*/}
                     </nav>
                 </Card>
 

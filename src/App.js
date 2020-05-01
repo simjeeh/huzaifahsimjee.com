@@ -6,9 +6,8 @@ import About from './Components/About';
 import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
-import Contact from './Components/Contact';
 import Skills from './Components/Skills';
-
+/*import Contact from './Components/Contact';*/
 
 class App extends Component {
 
@@ -48,7 +47,7 @@ class App extends Component {
         <Experience data={this.state.resumeData.experience}/>
         <Projects data={this.state.resumeData.experience}/>
         <Skills data={this.state.resumeData.experience}/>
-        <Contact data={this.state.resumeData.main}/>
+        {/*<Contact data={this.state.resumeData.main}/>*/}
       </div>
     );
   }

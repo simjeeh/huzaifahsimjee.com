@@ -315,7 +315,7 @@ header .scrolldown a:hover { color: #00b300; }
     border: none;
 }
 
-#experience .card-description{
+#experience .card-text{
     margin-bottom: 10px;
     font-weight: bold;
     color: black;
@@ -374,6 +374,8 @@ header .scrolldown a:hover { color: #00b300; }
     right: 0;
     margin-top: 10px;
     margin-right: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
 }
 
@@ -413,7 +415,7 @@ header .scrolldown a:hover { color: #00b300; }
     border: none;
 }
 
-#projects .card-description {
+#projects .card-text {
     margin-bottom: 10px;
     font-weight: bold;
     color: black;
@@ -459,7 +461,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #projects .flippy-back .card-text{
-    font-size: 1.4rem;
+    font-size: 1.4rem !important;
 }
 
 #projects .flippy-back {
@@ -472,6 +474,8 @@ header .scrolldown a:hover { color: #00b300; }
     right: 0;
     margin-top: 10px;
     margin-right: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
 }
 
@@ -597,7 +601,7 @@ header .scrolldown a:hover { color: #00b300; }
    cursor: pointer;
    height: auto;
    display: inline-block;
-	border-radius: 3px;
+   border-radius: 3px;
    margin-left: 26%;
 }
 #contact button.submit:hover {

@@ -11,13 +11,17 @@ class Skills extends Component {
             }
             var skills =
                     photos.map((cols) => (
-                        <Row>
-                            {cols.map((img) => (
-                                <Col calssName="text-center">
-                                    <Image src={"images/skills/"+img} rounded />
-                                </Col>
-                            ))}
-                        </Row>
+                        <React.Fragment key={cols}>
+                            <Row>
+                                {cols.map((img) => (
+                                    <React.Fragment key={img}>
+                                        <Col className="text-center">
+                                            <Image src={"images/skills/"+img} rounded />
+                                        </Col>
+                                    </React.Fragment>
+                                ))}
+                            </Row>
+                        </React.Fragment>
                     ))
         }
 

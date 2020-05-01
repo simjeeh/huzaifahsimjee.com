@@ -4,10 +4,8 @@ import {Container, Row, Col, Image, Button} from "react-bootstrap";
 class About extends Component {
     render() {
         if(this.props.data){
-            var name = this.props.data.name;
             var profilepic= "images/"+this.props.data.image;
-            var bio = this.props.data.bio;
-            var split_bio = this.props.data.bio.split('\n').map((line) => <p>{line}</p>)
+            var split_bio = this.props.data.bio.split('\n').map((line) => <React.Fragment key={line}><p>{line}</p></React.Fragment>)
             var resumeDownload = this.props.data.resumedownload;
         }
 
