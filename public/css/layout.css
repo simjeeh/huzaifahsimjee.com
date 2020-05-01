@@ -1,6 +1,8 @@
 body { background: #0f0f0f; }
 
+/* -------------------- */
 /* -----Navigation----- */
+/* -------------------- */
 #nav-wrap ul, #nav-wrap li, #nav-wrap a {
     margin: 0;
     padding: 0;
@@ -20,11 +22,11 @@ body { background: #0f0f0f; }
 
 #nav-button{
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     margin-right: 10%;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     background-color: #00b300;
     border-color: #00b300;
     width: 50px;
@@ -43,8 +45,8 @@ body { background: #0f0f0f; }
     opacity: 0.95;
     font-size: 10px;
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     margin-top: 50px;
     margin-right: 10%;
     width: 80%;
@@ -104,7 +106,9 @@ ul#nav li.current a {
     color: #00b300;
 }
 
-/* -----Header----- */
+/* -------------------- */
+/* -------Header------- */
+/* -------------------- */
 header {
    position: relative;
    height: 800px;
@@ -140,7 +144,7 @@ header .banner-text h1 {
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
-   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+   text-shadow: 0 1px 3px rgba(0, 0, 0, .8);
 }
 
 header .banner-text h3 {
@@ -148,7 +152,7 @@ header .banner-text h3 {
    color: lightgrey;
    margin: 0 auto;
    width: 70%;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+   text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 }
 
 header .banner-text h3 span,
@@ -167,7 +171,7 @@ header .social {
    margin: 24px 0;
    padding: 0;
    font-size: 30px;
-   text-shadow: 0px 1px 2px rgba(0, 0, 0, .8);
+   text-shadow: 0 1px 2px rgba(0, 0, 0, .8);
 }
 
 header .social li {
@@ -199,7 +203,9 @@ header .scrolldown a {
 
 header .scrolldown a:hover { color: #00b300; }
 
-/* -----About----- */
+/* --------------------- */
+/* --------About-------- */
+/* --------------------- */
 #about {
    background: #2B2B2B;
    padding-top: 66px;
@@ -241,7 +247,9 @@ header .scrolldown a:hover { color: #00b300; }
 
 #about a:hover, #about a:focus { color: #00b300; }
 
-/* -----Education----- */
+/* --------------------- */
+/* ------Education------ */
+/* --------------------- */
 #education {
     background: #fff;
     padding-top: 90px;
@@ -282,7 +290,9 @@ header .scrolldown a:hover { color: #00b300; }
     margin-top: 6px;
 }
 
-/* -----Experience-----*/
+/* -------------------- */
+/* -----Experience----- */
+/* -------------------- */
 #experience {
    background: #fff;
    padding-top: 90px;
@@ -310,7 +320,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #experience .card{
-    width: 35rem;
+    width: 35em;
     margin-bottom: 5%;
     border: none;
 }
@@ -326,7 +336,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #experience .flippy-container{
-    height: 30rem;
+    height: 30em;
 }
 
 #experience .flippy-card{
@@ -334,7 +344,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #experience .flippy-front{
-    width: 35rem;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -352,16 +362,26 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #experience .flippy-back{
-    width: 35rem;
+    width: 100%;
     border-radius: 5px;
 }
 
-#experience .flippy-back .card-title{
-    font-size: 1.7rem;
+@media (max-width: 350px){
+    #experience .flippy-back .card-text{
+        font-size: 1.26em !important;
+    }
+}
+
+#experience .flippy-back .card-title h4{
+    font-size: 1.3em;
+}
+
+#experience .flippy-back .card-title h5{
+    font-size: 1em;
 }
 
 #experience .flippy-back .card-text{
-    font-size: 1.4rem;
+    font-size: 1.39em;
 }
 
 #experience .flippy-back {
@@ -379,9 +399,9 @@ header .scrolldown a:hover { color: #00b300; }
     border-radius: 100%;
 }
 
-/* ------------------------------------------------------------------ */
-/* e. Projects Section
-/* ------------------------------------------------------------------ */
+/* -------------------- */
+/* ------Projects------ */
+/* -------------------- */
 
 #projects {
     background: #fff;
@@ -410,7 +430,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #projects .card{
-    width: 35rem;
+    width: 35em;
     margin-bottom: 5%;
     border: none;
 }
@@ -434,7 +454,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #projects .flippy-front{
-    width: 35rem;
+    width: 100%;
     border-radius: 5px;
 }
 
@@ -452,16 +472,22 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #projects .flippy-back{
-    width: 35rem;
+    width: 100%;
     border-radius: 5px;
 }
 
-#projects .flippy-back .card-title{
-    font-size: 1.7rem;
+@media (max-width: 350px){
+    #projects .flippy-back .card-text{
+        font-size: 1.26em !important;
+    }
+}
+
+#projects .flippy-back .card-title h4{
+    font-size: 1.3em;
 }
 
 #projects .flippy-back .card-text{
-    font-size: 1.4rem !important;
+    font-size: 1.39em;
 }
 
 #projects .flippy-back {
@@ -479,7 +505,9 @@ header .scrolldown a:hover { color: #00b300; }
     border-radius: 100%;
 }
 
-/*-----------*/
+/* -------------------- */
+/* -------Skills------- */
+/* -------------------- */
 
 #skills {
     background: #fff;
@@ -517,10 +545,9 @@ header .scrolldown a:hover { color: #00b300; }
     max-height: 12vmin;
 }
 
-/* ------------------------------------------------------------------ */
-/* h. Contact Section
-/* ------------------------------------------------------------------ */
-
+/* --------------------- */
+/* -------Contact------- */
+/* --------------------- */
 #contact {
    background: #191919;
    padding-top: 96px;
