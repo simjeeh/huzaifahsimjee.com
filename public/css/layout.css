@@ -541,8 +541,7 @@ header .scrolldown a:hover { color: #00b300; }
 }
 
 #skills img{
-    max-width: 12vmin;
-    max-height: 12vmin;
+    max-height: 10vh;
 }
 
 /* --------------------- */
