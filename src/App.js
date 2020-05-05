@@ -7,6 +7,7 @@ import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
 import data from './data/portfolioData.json';
+import ReactGA from 'react-ga';
 /*import Contact from './Components/Contact';*/
 
 class App extends Component {
@@ -17,6 +18,11 @@ class App extends Component {
         foo: 'bar',
         resumeData: data
     };
+  }
+
+  componentDidMount() {
+    ReactGA.initialize('UA-118897235-3');
+    ReactGA.pageview('/');
   }
 
   render() {
