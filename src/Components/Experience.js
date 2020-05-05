@@ -38,7 +38,7 @@ class Experience extends Component {
                                                 </span>
                                             </Card.Body>
                                         </a>
-                                        <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
+                                        <Button size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                     </FrontSide>
                                     <BackSide>
                                         <Card.Body>
@@ -50,7 +50,7 @@ class Experience extends Component {
                                             <Card.Text>
                                                 {work_description}
                                             </Card.Text>
-                                            <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
+                                            <Button size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                         </Card.Body>
                                     </BackSide>
                                 </Flippy>

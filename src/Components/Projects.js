@@ -42,7 +42,7 @@ class Projects extends Component {
                                                 </span>
                                             </Card.Body>
                                         </a>
-                                        <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
+                                        <Button size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                     </FrontSide>
                                     <BackSide>
                                         <Card.Body>
@@ -54,7 +54,7 @@ class Projects extends Component {
                                             <Card.Text>
                                                 {projects_description}
                                             </Card.Text>
-                                            <Button variant="success" size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
+                                            <Button size="lg" onClick={() => flippy.toggle()}><FontAwesomeIcon icon={faBars}/></Button>
                                         </Card.Body>
                                     </BackSide>
                                 </Flippy>
