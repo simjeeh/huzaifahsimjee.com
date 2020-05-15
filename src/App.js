@@ -6,7 +6,6 @@ import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Skills from './Components/Skills';
-import data from './data/portfolioData.json';
 import ReactGA from 'react-ga';
 /*import Contact from './Components/Contact';*/
 
@@ -16,13 +15,26 @@ class App extends Component {
     super(props);
     this.state = {
         foo: 'bar',
-        resumeData: data
+        resumeData: {}
     };
+  }
+
+  getResumeData(){
+      return fetch('https://raw.githubusercontent.com/hsimjee/huzaifahsimjee.com/master/public/data/portfolioData.json')
+          .then((response) => response.json())
+          .then((data) => {
+              this.setState({resumeData: data});
+          })
+          .catch((error) => {
+              console.error(error);
+              alert(error);
+          });
   }
 
   componentDidMount() {
     ReactGA.initialize('UA-118897235-3');
     ReactGA.pageview('/');
+    this.getResumeData();
   }
 
   render() {
